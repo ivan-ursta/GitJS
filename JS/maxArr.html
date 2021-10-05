@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(10);
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random() * 10);
+        }
+        maxArr(arr);
+
+        function maxArr(a) {
+            var max = arr.reduce(function(a, b) {
+                return Math.max(a, b);
+            }, 0);
+            alert(max);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        var fruits = ["Orange", "Banana", "Apple", "Watermelon", "Lemon", "Cherry"];
+        fruits.sort();
+        //         Вывод на экран с помощью document.write() в виде списка
+        // (с помощью тегов ul и li).
+        function showList(f) {
+            for (i = 1; i < f.length; i++)
+                document.write("<ul> <li>" + f[i] + "</li></ul>");
+        }
+        showList(fruits);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Phone book</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+        }
+        
+        .block {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Add new contact</h2>
+    <form method='GET'>
+        <b>Name </b><input type="text" placeholder="Enter name" name="name" />
+        <div class="block">
+            Phone number <input type="text" name="phone" id="ph" placeholder="Enter phone number" /> Phone type <select name="phoneType">
+                    <option value="1" selected>Cellular</option>
+                    <option value="2">Home</option>
+                    <option value="3">Work</option>
+                </select> Priority <input type="radio" name="main" value="1" checked />
+        </div>
+        <div class="block">
+            Date <input type='date' name="Data" id="dt" /> Data type <select name="dataType">
+                    <option value="1" selected>Birthday</option>
+                    <option value="2">Profession</option>
+                    <option value="3">First meeting</option>
+            </select>
+        </div>
+        <div class="block">
+            <b>Photo</b> <input type='file' name="photo">
+        </div>
+        <b>Email </b><input type="email" name="mail"><br/><br/>
+        <b>URL </b><input type="url" name="site"><br/><br/>
+        <b>Password </b><input type="password" name="passw"><br/><br/>
+        <b>Color </b><input type="color" name="colr"><br/><br/>
+        <b>Notification of birthday </b><input type="checkbox" name="notification"><br/><br/>
+        <b>Reset </b><input type="reset" name="res"><br/><br/>
+        <input type="button" value="One more phone" onclick="add_Phone()" />
+        <input type="button" value="One more data" onclick="add_Data()" />
+        <input type="button" value="One more photo" onclick="add_Photo()" />
+        <input type="submit" value="Save" style="margin-left:50px" />
+    </form>
+
+
+    <script>
+        function add_Phone() {
+
+            if (typeof phoneCounter == 'undefined') phoneCounter = 1;
+            if (typeof phoneNameCounter == 'undefined') phoneNameCounter = 1;
+            if (typeof divPhoneCounter == 'undefined') divPhoneCounter = 0;
+            phoneCounter++;
+            phoneNameCounter++;
+            var phoneForm = document.forms[0];
+
+            var phoneLine = phoneForm.children[2];
+            var newPhoneLine = phoneLine.cloneNode(true);
+            newPhoneLine.children[0].name = 'phone' + phoneNameCounter;
+            newPhoneLine.children[0].value = '';
+            newPhoneLine.children[1].name = 'phoneType' + phoneNameCounter;
+            newPhoneLine.children[2].checked = false;
+
+            var removePhoneButton = document.createElement('input');
+            removePhoneButton.type = 'button';
+            removePhoneButton.value = 'Remove phone';
+            removePhoneButton.addEventListener('click', rem_PhoneClick);
+            newPhoneLine.appendChild(removePhoneButton);
+            phoneForm.insertBefore(newPhoneLine, phoneForm.children[phoneCounter + 1]);
+            divPhoneCounter++;
+            divDataCounter++;
+        }
+
+        function add_Data() {
+
+            if (typeof dataCounter == 'undefined') dataCounter = 1;
+            if (typeof dataNameCounter == 'undefined') dataNameCounter = 1;
+            if (typeof divPhoneCounter == 'undefined') divPhoneCounter = 0;
+            dataCounter++;
+            dataNameCounter++;
+            var dataForm = document.forms[0];
+
+            var dataLine = dataForm.children[3 + divPhoneCounter];
+            var newDataLine = dataLine.cloneNode(true);
+            newDataLine.children[0].name = 'Data' + dataNameCounter;
+            newDataLine.children[0].value = '';
+            newDataLine.children[1].name = 'dataType' + dataNameCounter;
+
+            var removeDataButton = document.createElement('input');
+            removeDataButton.type = 'button';
+            removeDataButton.value = 'Remove data';
+            removeDataButton.addEventListener('click', rem_DataClick);
+            newDataLine.appendChild(removeDataButton);
+            dataForm.insertBefore(newDataLine, dataForm.children[divPhoneCounter + dataCounter + 2]);
+            divDataCounter++;
+        }
+
+        function add_Photo() {
+            if (typeof photoCounter == 'undefined') photoCounter = 1;
+            if (typeof photoNameCounter == 'undefined') photoNameCounter = 1;
+            if (typeof divDataCounter == 'undefined') divDataCounter = 0;
+            photoCounter++;
+            photoNameCounter++;
+            var photoForm = document.forms[0];
+
+            var photoLine = photoForm.children[4 + divDataCounter];
+            var newPhotoLine = photoLine.cloneNode(true);
+            newPhotoLine.children[0].name = 'photo' + photoNameCounter;
+            newPhotoLine.children[0].value = '';
+
+            var removePhotoButton = document.createElement('input');
+            removePhotoButton.type = 'button';
+            removePhotoButton.value = 'Remove photo';
+            removePhotoButton.addEventListener('click', rem_PhotoClick);
+            newPhotoLine.appendChild(removePhotoButton);
+            photoForm.insertBefore(newPhotoLine, photoForm.children[divDataCounter + photoCounter + 3]);
+        }
+
+        function rem_PhoneClick() {
+            var phoneLine = event.target.closest('div');
+            var phoneForm = document.forms[0];
+            phoneForm.removeChild(phoneLine);
+            phoneCounter--;
+        }
+
+        function rem_DataClick() {
+            var dataLine = event.target.closest('div');
+            var dataForm = document.forms[0];
+            dataForm.removeChild(dataLine);
+            dataCounter--;
+        }
+
+        function rem_PhotoClick() {
+            var photoLine = event.target.closest('div');
+            var photoForm = document.forms[0];
+            photoForm.removeChild(photoLine);
+            photoCounter--;
+        }
+    </script>
+</body>
+
+</html>

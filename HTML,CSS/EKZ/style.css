@@ -1,0 +1,89 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 620px 200px;
+    grid-gap: 20px;
+    background-color: rgb(255, 208, 0);
+    color: #fff;
+}
+
+.container>header,
+nav,
+main,
+footer,
+aside {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+header {
+    grid-column: span 11;
+    display: flex;
+}
+
+main {
+    grid-column: span 10;
+    flex: 1 1 auto;
+    display: flex;
+    /* дочерние элементы располагаются слева на право */
+    justify-content: flex-start;
+    padding-top: 2vh;
+    min-width: 700px;
+}
+
+aside.left {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    align-items: flex-start;
+    padding: 0;
+}
+
+aside.right {
+    display: flex;
+    grid-column: 12;
+    grid-row: 1 / 3;
+    background-image: url(images/welcome.gif);
+    background-size: 100%;
+}
+
+footer {
+    grid-column: span 11;
+    display: block;
+    padding: 0;
+}
+
+footer>nav,
+ul {
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline;
+}
+
+a {
+    color: #fff;
+    margin-left: 5px;
+}
+
+aside>p {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+aside.left>p>img {
+    width: 100%;
+}
+
+.menu>h1 {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.menu>nav {
+    padding: 0;
+    margin-left: 500px;
+}

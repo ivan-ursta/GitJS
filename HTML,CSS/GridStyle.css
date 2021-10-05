@@ -1,0 +1,301 @@
+.container {
+    display: grid;
+    margin: auto;
+    max-width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-family: "Gill Sans", sans-serif;
+    background-color: rgb(43, 42, 41);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 540px auto;
+}
+
+header>.container {
+    background-image: url("images/guitar.jpg");
+    background-size: 100% 140%;
+}
+
+body {
+    background-color: rgb(43, 42, 41);
+    margin: auto;
+}
+
+header {
+    display: block;
+    grid-column: span 12;
+    color: rgb(247, 175, 18);
+}
+
+.head-img {
+    grid-column: span 12;
+    margin-top: 130px;
+    margin-bottom: 50px;
+    justify-self: center;
+    color: rgba(231, 163, 17, 0.952);
+}
+
+.head-nav {
+    background-color: rgba(73, 71, 66, 0.418);
+    width: 80%;
+    margin: 0px auto;
+    grid-area: header;
+    grid-column: 1/13;
+    grid-row: 1;
+}
+
+section {
+    display: block;
+    grid-column: span 12;
+    color: rgb(247, 175, 18);
+}
+
+.services {
+    display: grid;
+    width: 80%;
+    margin: 40px auto;
+    grid-column: span 12;
+    grid-row: span 3;
+    margin-top: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.serv-txt {
+    display: grid;
+    grid-column: span 2/8;
+}
+
+.serv-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column: span 12;
+    margin-top: 50px;
+    grid-row: 2;
+    justify-content: space-between;
+}
+
+.serv-div>div {
+    margin: 10px;
+    width: 90%;
+}
+
+img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.photo {
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2vh;
+    grid-auto-flow: dense;
+}
+
+.photo .image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.photo .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    filter: brightness(0.5) grayscale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.photo .image img:hover {
+    filter: brightness(1) grayscale(0);
+    transform: scale(1.1);
+}
+
+img:hover {
+    border-color: #fff;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.38);
+}
+
+.services img:hover {
+    transform: scale(1.05);
+}
+
+.photo .image:first-child {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.photo .image:nth-child(2n+1) {
+    grid-row-start: span 2;
+}
+
+.photo .image:nth-child(4n+6) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+}
+
+.photo .image:nth-child(8) {
+    grid-column-start: 1;
+    grid-row-start: span 2;
+}
+
+footer {
+    background-color: rgba(247, 175, 18, 0.671);
+}
+
+.footer {
+    display: grid;
+    grid-area: header;
+    color: black;
+    margin: 40px auto;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    font-style: normal;
+    font-family: "Gill Sans", sans-serif;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+
+.footer>div.from {
+    grid-column: span 3;
+    width: 80%;
+}
+
+.footer p,
+a,
+h4 {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.footer>h4 {
+    grid-column: 11;
+}
+
+.social {
+    grid-column: 12/13;
+    padding: 10px;
+}
+
+.social>a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(images/social_icons.png);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    opacity: 0.7;
+}
+
+.social>a.fb {
+    background-position: 0 0;
+}
+
+.social>a.tw {
+    background-position: 50% 0;
+}
+
+.social>a.inst {
+    background-position: 100% 0;
+}
+
+nav {
+    padding: 10px 0;
+    width: 100%;
+    min-height: 65px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 17.5px 0;
+}
+
+nav ul li {
+    margin-right: 40px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+nav ul a {
+    color: rgb(247, 175, 18);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: .5s;
+}
+
+nav ul li:first-child {
+    margin-right: auto;
+}
+
+nav ul a:hover {
+    color: rgb(250, 192, 117);
+    border-bottom-color: rgb(250, 192, 117);
+    ;
+}
+
+header>div {
+    padding: 10px 20px;
+}
+
+header>div:nth-child(2) {
+    margin-left: auto;
+}
+
+h1,
+h2,
+h3 {
+    display: grid;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    animation: moveLeft .5s ease-out .3s backwards;
+}
+
+h2 {
+    margin-top: 55px;
+    font-size: 40px;
+    animation: moveRight .5s ease-out .8s backwards;
+}
+
+p {
+    color: rgb(153, 151, 151);
+    text-align: center;
+}
+
+div.serv-txt>h2 {
+    margin-bottom: 0;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}

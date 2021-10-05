@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var num = +prompt("Enter number:");
+        var deg = +prompt("Enter degree:");
+
+        function elevationToTheDegree(n, d) {
+            if (d == 0) return 1;
+            return n * elevationToTheDegree(n, d - 1);
+        }
+        alert(elevationToTheDegree(num, deg));
+    </script>
+</body>
+
+</html>

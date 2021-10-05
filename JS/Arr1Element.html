@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = new Array(10);
+        let arr2 = new Array(5);
+        let arr3 = [];
+        addArr(arr1);
+        addArr(arr2);
+
+        alert(arr1);
+        alert(arr2);
+        newArr(arr1, arr2, arr3);
+        alert(arr3);
+
+        // Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива,
+        // которых нет во втором массиве.
+
+        function newArr(x, y, z) {
+
+            for (let i = 0; i < x.length; i++) {
+                let n = 0;
+                for (let j = 0; j < y.length; j++) {
+                    if (!n) {
+                        if (x[i] !== y[j]) {
+                            continue
+                        } else n++;
+                    } else break;
+                }
+                if (!n) {
+                    let p = 0;
+                    for (let k = 0; k < z.length; k++) {
+                        if (z[k] !== x[i]) {
+                            continue;
+                        } else p++;
+                    }
+                    if (!p) {
+                        z.push(x[i]);
+                    }
+                } else continue;
+
+            }
+
+        }
+
+        function addArr(a) {
+            for (let i = 0; i < a.length; i++) {
+                a[i] = Math.floor(Math.random() * 10);
+            }
+        }
+    </script>
+</body>
+
+</html>

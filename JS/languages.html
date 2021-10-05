@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Languages</title>
+
+</head>
+
+<body>
+    <h1>Languages list</h1>
+    <script>
+        function showLanguages(l) {
+            for (i = 0; i < l.length; i++) {
+                if (l[i] == navigator.language)
+                    document.write("<ul><li><strong>" + l[i] + "</strong></li></ul>");
+                else
+                    document.write("<ul> <li>" + l[i] + "</li></ul>");
+            }
+        }
+        showLanguages(navigator.languages);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Window</title>
+    <style>
+        button {
+            margin: 10px 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="window.openStep()">IT Step</button>
+    <button onclick="window.closeStep()">Close</button>
+    <script>
+        function openStep() {
+            newWin = window.open("https://itstep.org", "StepWin", "resizable");
+            newWin.resizeTo(640, 480);
+        }
+
+        function closeStep() {
+            newWin.close();
+        }
+    </script>
+
+</html>

@@ -1,0 +1,256 @@
+header {
+    height: 500px;
+    background: url(https://source.unsplash.com/NVHDSYqBZCE/1920x1080) no-repeat center #0f1384;
+    background-size: cover;
+    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+h1 {
+    font-size: 3em;
+    animation: moveLeft .5s ease-out .3s backwards;
+}
+
+header h2 {
+    font-size: 2em;
+    animation: moveRight .5s ease-out .8s backwards;
+}
+
+.portfolio-item {
+    margin: .5rem 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid transparent;
+    transition: 400ms ease-out;
+}
+
+.portfolio-item img {
+    display: block;
+    border: 4px solid #dbdbdb;
+    transition: 400ms ease-out;
+}
+
+.portfolio-item:hover {
+    border-color: #fff;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.15);
+}
+
+.portfolio-item::after {
+    content: attr(data-descr);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 20% 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.5rem;
+    transition: 500ms ease-out 200ms;
+    pointer-events: none;
+}
+
+.portfolio-item:hover::after {
+    top: 20%;
+}
+
+.tab {
+    flex: 1 0 20%;
+}
+
+.name {
+    font-size: 1.3em;
+}
+
+.speciality {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.tab {
+    flex: 1 0 20%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: flex-basis 500ms ease-in-out;
+}
+
+.tab-details {
+    opacity: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.57);
+    list-style-type: none;
+    line-height: 2;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: .5s;
+}
+
+.tab-info {
+    text-align: center;
+}
+
+.tab:hover {
+    flex-basis: 35%;
+    overflow: visible;
+}
+
+.tab:hover .tab-details {
+    opacity: 1;
+}
+
+.tab:hover .tab-info {
+    margin-left: 20%;
+}
+
+.tab:hover .tab-details {
+    left: 0;
+}
+
+.testimonial {
+    display: inline-flex;
+    transition: .5s;
+    height: 100%;
+    background-color: #fff;
+}
+
+.testimonial:hover {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+}
+
+.testimonial-author {
+    display: block;
+    margin: 20px;
+    align-self: flex-start;
+}
+
+.testimonial-body {
+    margin: 20px;
+}
+
+.testimonial-body p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.testimonial-body footer {
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 15px;
+    border-top: 2px solid #dbdbdb;
+}
+
+#footer {
+    background-color: #0f1384;
+    color: #fff;
+    margin-top: 3.5rem;
+    padding: 20px 0;
+}
+
+#footer .row {
+    margin: 0;
+}
+
+#footer a {
+    color: #c0d9fc;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    height: 38px;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 12px rgba(15, 19, 132, 0.38);
+}
+
+textarea {
+    min-height: 145px;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.38);
+    min-height: 65px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: .5s;
+}
+
+nav ul a:hover {
+    color: #989898;
+    border-bottom-color: #989898;
+}
+
+.mobile-toggle {
+    /* display: none; */
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 20px;
+    width: 30px;
+}

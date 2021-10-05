@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var number = +prompt("Enter number:");
+
+        function nMax(num, max = 0) {
+            if (num < 10) {
+                if (num > max) max = num;
+                return max;
+            }
+
+            const lastDigit = num % 10;
+
+            if (lastDigit > max) {
+                max = lastDigit;
+            }
+            num = Math.floor(num / 10);
+
+            return nMax(num, max);
+        }
+        alert(nMax(number));
+    </script>
+</body>
+
+</html>

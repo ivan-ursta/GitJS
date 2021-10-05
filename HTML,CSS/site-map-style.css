@@ -1,0 +1,12 @@
+p,
+hr {
+    margin-left: 60px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.arrow {
+    list-style-image: url(examples/markers/arrow.png);
+}

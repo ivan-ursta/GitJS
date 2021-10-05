@@ -1,0 +1,60 @@
+dt {
+    font-weight: bold;
+    color: #036011;
+}
+
+dd {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+dd::before {
+    background-color: #ccc;
+    content: "Описание";
+}
+
+ol li::before {
+    content: counter(number) ') ';
+    counter-increment: number;
+}
+
+ol {
+    font-weight: 600;
+}
+
+ul {
+    font-weight: 200;
+}
+
+#winter {
+    color: rgb(0, 0, 200);
+}
+
+#spring {
+    color: rgb(0, 190, 0);
+}
+
+#summer {
+    color: #ffd24c;
+}
+
+#autumn {
+    color: #d96c00;
+}
+
+#winter li {
+    list-style-image: url(examples/markers/snow.png);
+}
+
+#spring li {
+    list-style-image: url(examples/markers/leaf.png);
+}
+
+#summer ul {
+    list-style-image: url(examples/markers/sun.png);
+}
+
+#autumn ul {
+    list-style-image: url(examples/markers/rain.png);
+}

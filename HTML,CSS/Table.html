@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        border-collapse: separate;
+        border-spacing: 10px;
+        background-color: #aaaaaa;
+        empty-cells: hide;
+    }
+    
+    tr {
+        /*фоновый цвет для строки*/
+        background-color: #ccc;
+    }
+    
+    th {
+        border: 1px solid red;
+    }
+    
+    td {
+        border: 1px solid blue;
+    }
+    
+    #uniq {
+        width: 30vw;
+        height: 20vh;
+        text-align: right;
+        vertical-align: bottom;
+        background-color: #eeeeee;
+    }
+</style>
+
+<body>
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor</td>
+            <td id="uniq">Lorem ipsum dolor</td>
+            <td>Lorem ipsum dolor</td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

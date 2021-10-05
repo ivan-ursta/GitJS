@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = new Array(10);
+        let arr2 = new Array(5);
+        addArr(arr1);
+        addArr(arr2);
+
+        alert(arr1);
+        alert(arr2);
+        newArr(arr1, arr2);
+        alert(arr3);
+
+
+        function newArr(x, y) {
+            var arr3 = arr1.concat(arr2);
+        }
+
+        function addArr(a) {
+            for (let i = 0; i < a.length; i++) {
+                a[i] = Math.floor(Math.random() * 10);
+            }
+        }
+    </script>
+</body>
+
+</html>

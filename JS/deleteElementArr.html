@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = new Array(10);
+        let index = +prompt("Enter index:");
+
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = Math.floor(Math.random() * 10);
+        }
+        alert(arr);
+        deleteElement(arr, index);
+
+        function deleteElement(a, i) {
+            a.splice(i, 1);
+            alert(a);
+        }
+    </script>
+</body>
+
+</html>

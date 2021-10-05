@@ -1,0 +1,72 @@
+.group {
+    font-weight: 800;
+    list-style-image: url(examples/markers/football.png);
+}
+
+ul {
+    font-weight: 200;
+}
+
+#poland {
+    list-style-image: url(examples/markers/flags/poland.png);
+}
+
+#russia {
+    list-style-image: url(examples/markers/flags/russia.png);
+}
+
+#czech {
+    list-style-image: url(examples/markers/flags/czech.png);
+}
+
+#greece {
+    list-style-image: url(examples/markers/flags/greece.png);
+}
+
+#germany {
+    list-style-image: url(examples/markers/flags/germany.png);
+}
+
+#netherlands {
+    list-style-image: url(examples/markers/flags/netherlands.png);
+}
+
+#portugal {
+    list-style-image: url(examples/markers/flags/portugal.png);
+}
+
+#denmark {
+    list-style-image: url(examples/markers/flags/denmark.png);
+}
+
+#spain {
+    list-style-image: url(examples/markers/flags/spain.png);
+}
+
+#italy {
+    list-style-image: url(examples/markers/flags/italy.png);
+}
+
+#croatia {
+    list-style-image: url(examples/markers/flags/croatia.png);
+}
+
+#ireland {
+    list-style-image: url(examples/markers/flags/ireland.png);
+}
+
+#ukraine {
+    list-style-image: url(examples/markers/flags/ukraine.png);
+}
+
+#england {
+    list-style-image: url(examples/markers/flags/england.png);
+}
+
+#france {
+    list-style-image: url(examples/markers/flags/france.png);
+}
+
+#sweden {
+    list-style-image: url(examples/markers/flags/sweden.png);
+}

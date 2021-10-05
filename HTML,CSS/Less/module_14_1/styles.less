@@ -1,0 +1,99 @@
+/*переменная для фонового цвета блока*/
+// @div-background: #555;
+/*переменная для цвета текста блока*/
+// @div-color: #eee;
+
+// div{
+//     background-color: @div-background;
+//     color: @div-color;
+// }
+
+/*переменная - имя селектора*/
+// @selector-class: border;
+// @selector-id: center;
+
+/*переменная - путь*/
+// @path: "images/";
+// .@{selector-class} {
+//     background: url("@{path}img-2.jpg");
+//     border: 5px dotted @div-color;
+// }
+
+/*переменная - имя свойства*/
+// @prop: color;
+// @pad-1: 5vw;
+// @pad-2: 5px;
+// @col-1: rgb(240, 200, 240);
+// @col-2: #999;
+// #@{selector-id} {
+//     @{prop}: (@col-1 - @col-2);
+//     padding: (@pad-1 + @pad-2);
+// }
+
+
+// ul{
+//     background-color: gray;
+//     li{
+//         list-style: none;
+//         a {
+//             color: #fff;
+//             &:hover{
+//                 color: #f0f;
+//             }
+//         }
+//     }
+// }
+
+
+// .note {
+//     &-agree {
+//       background-color: green;
+//     }
+//     &-info {
+//       background-color: blue;
+//     }
+//     &-danger {
+//       background-color: red;
+//     }
+// }
+
+
+// li {
+//     & + & {
+//       margin-left: 5px;
+//     }
+//     & & {
+//       list-style-type: circle; 
+//     }
+// }
+
+
+// .className(@color) {
+//   color: @color;
+// }
+// #idName(@color, @colorHover) {
+//   color: @color;
+//   &:hover{
+//     color: @colorHover;
+//   }
+// }
+// .mixin-class {
+//   .className(pink);
+// }
+// #mixin-id {
+//   #idName(red, blue);
+// }
+
+
+
+//function
+
+@widthMax: 40mm;
+@widthReal: 200px;
+@widthMaxPx: convert(@widthMax, 'px');
+
+div {
+  width: max(@widthMaxPx,@widthReal); 
+  //color: if((false), black, red);
+}
+

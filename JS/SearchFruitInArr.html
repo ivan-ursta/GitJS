@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        let fruits = ["Orange", "Banana", "Apple", "Watermelon", "Lemon", "Cherry"];
+        fruits.sort();
+        let str = prompt("Enter fruits:");
+        str = str.charAt(0).toUpperCase() + str.slice(1);
+        alert(searchElement(fruits));
+
+        //  Функция принимает название
+        // фрукта и возвращает индекс найденного элемента или -1,
+        // если не найден. Поиск должен быть нерегистрозависимым.
+        function searchElement(f) {
+            let n = 0;
+            for (i = 0; i < f.length; i++) {
+                if (str == f[i]) {
+                    n++;
+                    return f.indexOf(str);
+                } else continue;
+            }
+            if (!n) return -1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+//function
+
+@widthMax: 40mm;
+@widthReal: 200px;
+@widthMaxPx: convert(@widthMax, 'px');
+
+div {
+  width: max(@widthMaxPx,@widthReal); 
+  //color: if((false), black, red);
+}
+

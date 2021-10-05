@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = +prompt("Enter x");
+        alert(bracKets(x));
+
+        function bracKets(x) {
+            if (x == 0) return '';
+            return '(' + bracKets(x - 1) + ')';
+        }
+    </script>
+</body>
+
+</html>

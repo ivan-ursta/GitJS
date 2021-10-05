@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var number = +prompt("Enter number");
+
+        function mulTip(num) {
+            var b = 2;
+            var factors = 1;
+            if (num == b) {
+                return b;
+            }
+            while (num > b) {
+                if (num % b == 0) {
+                    factors += ',' + b;
+                }
+                b++;
+            }
+            factors += ',' + num;
+            return factors;
+        }
+
+        alert(mulTip(number));
+    </script>
+</body>
+
+</html>

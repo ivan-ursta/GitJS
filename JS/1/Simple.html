@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var number = +prompt("Enter number");
+
+        function nSimple(n, i = 2) {
+            if (i > n / 2) return true;
+            return n % i ? nSimple(n, ++i) : false;
+        }
+
+        alert(nSimple(number));
+    </script>
+</body>
+
+</html>

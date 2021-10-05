@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<TITLE>Entities</title>
+<!-- LINK href="./mstyle.css" rel="stylesheet" type="text/css" -->
+</head>
+<body bgcolor="white" text="black" link="black" vlink="black" alink="red">
+
+
+<H2><font face="MS sans serif" color="navy">Использование символьных подстановок</font></h2>
+<DIV align="right">
+Любые дополнения и комментарии к 
+<BR>данной статье только приветствуются
+</div>
+<HR size="5" color="navy"><CENTER>
+<TABLE border=0 width="90%" align="center">
+<TR><TD>
+<FONT face="Arial">
+<B>Я думаю,</b> что многие люди, успевшие обзавестись собственными страничками, уже не раз сталкивались 
+с ситуациями, когда в текст HTML необходимо (или желательно) было вставить какой-либо символ, 
+отсутствующий на стандартной клавиатуре. Как показывает практика, моя - уж во всяком случае, в 
+таких ситуациях люди стараются просто обойти затруднения, подменяя необходимый им символ комбинацией
+других - так, например, нередко знак копирайта &copy; (прав&nbsp;собственности) пишут как (c).
+Также очень часто можно видеть ссылки вроде "Жми Сюда>>>", но почти никогда - "&lt;&lt;&lt;Жми Сюда" или 
+"&lt;&lt;&lt;Жми Сюда&gt;&gt;&gt;", потому что встретившаяся в тексте кавычка &lt; будет автоматически 
+распознана броузером как начало тега, что нарушит отображение части следующего за ней текста.
+<P><B>Между тем</b> существует очень простой способ это сделать - для этого существуют так
+ называемые символьные подстановки (entities) - мнемонические коды, начинающиеся со знака 
+амперсанда ( & ) и заканчивающиеся точкой с запятой. С их помощью можно вставить в текст файла любой нужный вам символ. Далее я приведу 
+таблицу мнемонических кодов для наиболее используемых символов.<P></font>
+<FONT face="Times New Roman">
+<TABLE>
+<TR><TD width="100"><B>&amp;amp;</b><TD>амперсанд
+<TR><TD><B>&amp;lt;</b><TD>знак &lt;
+<TR><TD><B>&amp;gt;</b><TD>знак &gt;
+<TR><TD><B>&amp;quot;</b><TD>кавычки ""
+<TR><TD><B>&amp;reg;</b><TD>знак зарегестрированной товарной марки &reg;
+<TR><TD><B>&amp;copy;</b><TD>копирайт &copy;
+<TR><TD><B>&amp;nbsp;</b><TD>неразрывный пробел
+</table></font>
+<P><FONT face="Arial">
+<B>Также необходимо остановиться</b> на специфических буквах европейских алфавитов - так как кроме своих
+прямых функций они могут в случае необходимости заменять русские - там, где надо, например, проставить ударение.
+Кроме того, напомню, что прописная буква А со звонким ударением &amp;Aring; - международное 
+обозначение ангстрема, а перечёркнутая буква о &amp;Oslash; - диаметра. Мнемоники эти строятся по 
+общему правилу -<BR> амперсанд & + сама буква в необходимом регистре + вид ударения + ";"<BR>
+где вид ударения может быть :
+<TABLE>
+<TR><TD width="100"><B>grave</b><TD>тупое ударение, или гравис
+<TR><TD><B>acute</b><TD>острое ударение, или акут
+<TR><TD><B>circ</b><TD>диакритическое ударение, или циркумфлекс
+<TR><TD><B>tilde</b><TD>тильда
+<TR><TD><B>uml</b><TD>умлаут
+</table>
+Кроме того, существует несколько исключений - например перечёркнутая о или с цедиль.
+</font><P>
+<FONT face="Times New Roman">
+<TABLE>
+<TR><TH colspan=2 bgcolor="#cccccc">Прописные<TD><TH colspan=2 bgcolor="#cccccc">Строчные
+<TR><TD width="100"><B>&amp;Agrave</b><TD>&Agrave;
+<TH rowspan=29 width="100"></th>
+<TD width="100"><B>&amp;agrave;</b><TD>&agrave;
+<TR><TD><B>&amp;Aacute;</b><TD>&Aacute;
+<TD><B>&amp;aacute;</b><TD>&aacute;
+<TR><TD><B>&amp;Acirc;</b><TD>&Acirc;
+<TD><B>&amp;acirc;</b><TD>&acirc;
+<TR><TD><B>&amp;Atilde;</b><TD>&Atilde;
+<TD><B>&amp;atilde;</b><TD>&atilde;
+<TR><TD><B>&amp;Auml;</b><TD>&Auml;
+<TD><B>&amp;auml;</b><TD>&auml;
+<TR><TD><B>&amp;Aring;</b><TD>&Aring;
+<TD><B>&amp;aring;</b><TD>&aring;
+<TR><TD><B>&amp;AELIG;</b><TD>&Aelig;
+<TD><B>&amp;aelig;</b><TD>&aelig;
+<TR><TD><B>&amp;Ccedil;</b><TD>&Ccedil;
+<TD><B>&amp;ccedil;</b><TD>&ccedil;
+<TR><TD><B>&amp;Egrave;</b><TD>&Egrave;
+<TD><B>&amp;egrave;</b><TD>&egrave;
+<TR><TD><B>&amp;Eacute;</b><TD>&Eacute;
+<TD><B>&amp;eacute;</b><TD>&eacute;
+<TR><TD><B>&amp;Ecirc</b><TD>&Ecirc;
+<TD><B>&amp;ecirc;</b><TD>&ecirc;
+<TR><TD><B>&amp;Euml;</b><TD>&Euml;
+<TD><B>&amp;euml;</b><TD>&euml;
+<TR><TD><B>&amp;Iacute;</b><TD>&Iacute;
+<TD><B>&amp;iacute;</b><TD>&iacute;
+<TR><TD><B>&amp;Igrave;</b><TD>&Igrave;
+<TD><B>&amp;igrave;</b><TD>&igrave;
+<TR><TD><B>&amp;Icirc;</b><TD>&Icirc;
+<TD><B>&amp;icirc;</b><TD>&icirc;
+<TR><TD><B>&amp;Iuml;</b><TD>&Iuml;
+<TD><B>&amp;iuml;</b><TD>&iuml;
+<TR><TD><B>&amp;ETH;</b><TD>&ETH;
+<TD><B>&amp;eth;</b><TD>&eth;
+<TR><TD><B>&amp;Ntilde;</b><TD>&Ntilde;
+<TD><B>&amp;ntilde;</b><TD>&ntilde;
+<TR><TD><B>&amp;Ograve;</b><TD>&Ograve;
+<TD><B>&amp;ograve;</b><TD>&ograve;
+<TR><TD><B>&amp;Oacute;</b><TD>&Oacute;
+<TD><B>&amp;oacute;</b><TD>&oacute;
+<TR><TD><B>&amp;Ocirc;</b><TD>&Ocirc;
+<TD><B>&amp;ocirc;</b><TD>&ocirc;
+<TR><TD><B>&amp;Otilde;</b><TD>&Otilde;
+<TD><B>&amp;otilde;</b><TD>&otilde;
+<TR><TD><B>&amp;Ouml;</b><TD>&Ouml;
+<TD><B>&amp;ouml;</b><TD>&ouml;
+<TR><TD><B>&amp;Oslash;</b><TD>&Oslash;
+<TD><B>&amp;oslash</b><TD>&oslash;
+<TR><TD><B>&amp;Ugrave;</b><TD>&Ugrave;
+<TD><B>&amp;ugrave;</b><TD>&ugrave;
+<TR><TD><B>&amp;Uacute;</b><TD>&Uacute;
+<TD><B>&amp;uacute;</b><TD>&uacute;
+<TR><TD><B>&amp;Ucirc;</b><TD>&Ucirc;
+<TD><B>&amp;ucirc;</b><TD>&ucirc;
+<TR><TD><B>&amp;Uuml;</b><TD>&Uuml;
+<TD><B>&amp;uuml;</b><TD>&uuml;
+<TR><TD><B>&amp;Yacute;</b><TD>&Yacute;
+<TD><B>&amp;yacute;</b><TD>&yacute;
+</table>
+</font>
+<P><FONT face="Arial">
+<B>Кроме символьных</b> (мнемонических) подстановок существуют также численные. С их помощью можно 
+поместить в текст файла поместить любой символ из текущей кодировки, если мы знаем его числовой код.
+В таком случае конструкция для вставки выглядит так :
+<BR><TABLE>
+<TR><TD width="150"><B>&amp;#</b>числовой_код;<TD>если код - в десятичной записи
+<TR><TD width="150"><B>&amp;#x</b>числовой_код;<TD>если код - в шестнадцатеричной записи</table><P>
+<B>Приведу наиболее,</b> на мой взгляд, употребительные подстановки -
+</font>
+<FONT face="Times New Roman">
+<BR><TABLE>
+<TR><TD width="100"><B>&amp;#151;</b><TD> длинное тире &#151;
+<TR><TD width="100"><B>&amp;#171;</b><TD> открывающие кавычки &#171;
+<TR><TD width="100"><B>&amp;#187;</b><TD> закрывающие кавычки &#187;
+</table><BR>
+</font>
+</table></center>
+<HR size="5" color="navy">
+<center><A HREF="javascript:history.back()" onMouseOver="window.status='Назад';return true">[ОБРАТНО]</a></center>
+<HR size="5" color="navy">
+<P align="right">&copy; Sm@cker 2002</p>
+</body>
+</html><!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="http://bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

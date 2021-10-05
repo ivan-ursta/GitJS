@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let day = +prompt("Enter day");
+        let month = +prompt("Enter month");
+        let year = +prompt("Enter year");
+        let dayM = 0;
+        daTa(day, month, year);
+
+        function daTa(d, m, y) {
+            switch (m) {
+                case 1:
+                    dayM = 31;
+                    break
+                case 2:
+                    if (vysYear(y)) {
+                        dayM = 29;
+                    } else dayM = 28;
+                    break
+                case 3:
+                    dayM = 31;
+                    break
+                case 4:
+                    dayM = 30;
+                    break
+                case 5:
+                    dayM = 31;
+                    break
+                case 6:
+                    dayM = 30;
+                    break
+                case 7:
+                    dayM = 31;
+                    break
+                case 8:
+                    dayM = 31;
+                    break
+                case 9:
+                    dayM = 30;
+                    break
+                case 10:
+                    dayM = 31;
+                    break
+                case 11:
+                    dayM = 30;
+                    break
+                case 12:
+                    dayM = 31;
+                    break
+                default:
+                    alert("error month!");
+            }
+
+            d++
+            if (m === 12 && d > dayM) {
+                d = 1;
+                m = 1;
+                y++;
+            }
+            if (d > dayM) {
+                d = 1;
+                m++;
+            }
+
+            alert(d + ' ' + m + ' ' + y);
+
+        }
+
+        function vysYear(y) {
+            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+                return 1;
+            } else return 0;
+        }
+    </script>
+</body>
+
+</html>

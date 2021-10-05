@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = +prompt("Enter x");
+        let res = 0;
+        numSum(x);
+        alert(res);
+
+        function numSum(x) {
+            if (x % 10 == 0) return x;
+            res += (x % 10);
+            return numSum(Math.floor(x / 10));
+        }
+    </script>
+</body>
+
+</html>

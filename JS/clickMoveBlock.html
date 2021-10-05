@@ -1,0 +1,34 @@
+<!doctype html />
+<html>
+<meta charset="utf-8" />
+<title>///</title>
+
+<head>
+    <style>
+        body {
+            position: relative;
+            height: 2000px;
+            margin: 0
+        }
+        
+        .block {
+            border: 1px solid gray;
+            background-color: lime;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body onclick="moveBlock(event)">
+    <div id="b1" class="block"></div>
+    <script>
+        function moveBlock(e) {
+            b1.style.left = e.pageX + 'px';
+            b1.style.top = e.pageY + 'px'
+        }
+    </script>
+</body>
+
+</html>
